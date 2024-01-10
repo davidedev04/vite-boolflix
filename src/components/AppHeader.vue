@@ -1,7 +1,19 @@
 <script>
+
+import { store } from "../store.js"
+
 export default {
-    name: "AppHeader"
+    name: "AppHeader",
+    
+    data() {
+
+        return {
+            store
+        }
+
+    }
 }
+
 </script>
 
 <template>
@@ -34,7 +46,7 @@ header {
         padding-right: 15px;
         display: flex;
 
-        .buttonDist{
+        .buttonDist {
             margin-left: 5px;
         }
 

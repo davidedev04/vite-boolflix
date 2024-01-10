@@ -1,12 +1,27 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue'
+import AppMain from './components/AppMain.vue';
+
+// richiamiamo lo store
+import { store } from "./store.js";
+
+// richiamiamo l'axios
+import axios from 'axios';
 
 export default {
   components: {
     AppHeader,
     AppMain
-  }
+  },
+
+  data() {
+
+    return {
+      store
+    }
+
+  },
+
 }
 
 </script>
@@ -16,4 +31,4 @@ export default {
   <AppMain />
 </template>
 
-<style></style>
+<style lang="scss"></style>
