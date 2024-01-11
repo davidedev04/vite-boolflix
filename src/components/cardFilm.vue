@@ -4,7 +4,7 @@ export default {
     name: "cardFilm",
 
     props: {
-        descrizione: Object
+        descrizione: Object,
     },
 }
 
