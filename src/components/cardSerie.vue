@@ -6,14 +6,27 @@ export default {
     props: {
         descrizioneSerie: Object,
     },
+
+    methods: {
+        getImage(posterPath) {
+            const basePath = "https://image.tmdb.org/t/p/w342";
+            return `${basePath}${posterPath}`;
+        }
+    }
+
 }
 
 </script>
 
 <template>
-    <h4>{{ descrizioneSerie.original_name }}</h4>
-    <h4>{{ descrizioneSerie.original_language }}</h4>
-    <h4>{{ descrizioneSerie.vote_average }}</h4>
+    <img :src="getImage(descrizioneSerie.poster_path)" alt="">
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+
+</style>

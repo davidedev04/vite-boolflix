@@ -23,13 +23,13 @@ export default {
 
 <template>
     <main>
-        <h1>FILM</h1>
+        <h1 class="ms-3">FILM</h1>
         <section class="d-flex flex-wrap ms-3">
             <div class="cardF" v-for="item in store.filmsArr" :key="item">
                 <cardFilm :descrizione="item" />
             </div>
         </section>
-        <h1>SERIE TV</h1>
+        <h1 class="ms-3">SERIE TV</h1>
         <section class="d-flex flex-wrap ms-3">
             <div class="cardF" v-for="item in store.serietvArr" :key="item">
                 <cardSerie :descrizioneSerie="item" />
@@ -46,14 +46,13 @@ main {
 
     .cardF {
         width: 230px;
-        height: 400px;
+        height: 345px;
         background-color: #fff;
         margin: 10px;
     }
 
     h1 {
         color: #fff;
-        margin-left: 15px;
     }
 }
 </style>
