@@ -11,11 +11,9 @@ export default {
 </script>
 
 <template>
-    <div class="card">
-        <h4>{{ descrizione.original_title }}</h4>
-        <h4>{{ descrizione.original_language }}</h4>
-        <h4>{{ descrizione.vote_average }}</h4>
-    </div>
+    <h4>{{ descrizione.original_title }}</h4>
+    <h4>{{ descrizione.original_language }}</h4>
+    <h4>{{ descrizione.vote_average }}</h4>
 </template>
 
 <style lang="scss" scoped></style>
