@@ -22,12 +22,38 @@ export default {
 
   },
 
+  methods: {
+    getFilms() {
+      let myAdress = store.apiUrl
+
+      if (store.searchContent !== "") {
+        myAdress += `&query=${store.searchContent}`
+      }
+
+      axios
+
+        .get(myAdress)
+        .then((res) => {
+          store.filmsArr = res.data.results;
+          console.log(store.filmsArr);
+        })
+        .catch((err) => {
+          console.error("Errore:", err);
+        })
+
+    }
+  },
+
+  created() {
+    this.getFilms();
+  }
+
 }
 
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @search="getFilms" />
   <AppMain />
 </template>
 

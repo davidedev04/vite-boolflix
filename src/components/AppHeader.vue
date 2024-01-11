@@ -20,8 +20,8 @@ export default {
     <header>
         <h1 class="titolo">BOOLFLIX</h1>
         <div class="inputDiv">
-            <input type="text" class="form-control" placeholder="Search">
-            <button type="button" class="btn btn-danger buttonDist">INVIA</button>
+            <input type="text" class="form-control" placeholder="Search" v-model.trim="store.searchContent">
+            <button type="button" class="btn btn-danger buttonDist" @click="$emit('search')">INVIA</button>
         </div>
     </header>
 </template>
