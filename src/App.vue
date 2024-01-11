@@ -24,18 +24,31 @@ export default {
 
   methods: {
     getFilms() {
-      let myAdress = store.apiUrlF
+      let myAdressF = store.apiUrlF
+      let myAdressS = store.apiUrlS
 
       if (store.searchContent !== "") {
-        myAdress += `&query=${store.searchContent}`
-      } 
+        myAdressF += `&query=${store.searchContent}`
+        myAdressS += `&query=${store.searchContent}`
+      }
 
       axios
 
-        .get(myAdress)
+        .get(myAdressF)
         .then((res) => {
           store.filmsArr = res.data.results;
           console.log(store.filmsArr);
+        })
+        .catch((err) => {
+          console.error("Errore:", err);
+        })
+
+      axios
+
+        .get(myAdressS)
+        .then((res) => {
+          store.serietvArr = res.data.results;
+          console.log(store.serietvArr);
         })
         .catch((err) => {
           console.error("Errore:", err);
