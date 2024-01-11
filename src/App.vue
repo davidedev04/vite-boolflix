@@ -66,7 +66,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @search="getFilms" />
+  <AppHeader @performSearch="getFilms" />
   <AppMain />
 </template>
 

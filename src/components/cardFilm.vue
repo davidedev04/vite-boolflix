@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <img :src="getImage(descrizione.poster_path)" alt="">
+    <img :src="getImage(descrizione.poster_path)" :alt="descrizione.original_title">
 </template>
 
 <style lang="scss" scoped>

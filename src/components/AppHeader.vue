@@ -21,7 +21,7 @@ export default {
         <h1 class="titolo">BOOLFLIX</h1>
         <div class="inputDiv">
             <input type="text" class="form-control" placeholder="Search" v-model.trim="store.searchContent">
-            <button type="button" class="btn btn-danger buttonDist" @click="$emit('search')">INVIA</button>
+            <button type="button" class="btn btn-danger buttonDist" @click="$emit('performSearch')">INVIA</button>
         </div>
     </header>
 </template>
