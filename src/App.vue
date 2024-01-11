@@ -24,11 +24,11 @@ export default {
 
   methods: {
     getFilms() {
-      let myAdress = store.apiUrl
+      let myAdress = store.apiUrlF
 
       if (store.searchContent !== "") {
         myAdress += `&query=${store.searchContent}`
-      }
+      } 
 
       axios
 
