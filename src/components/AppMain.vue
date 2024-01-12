@@ -45,10 +45,9 @@ main {
     padding-top: 100px;
 
     .cardF {
-        width: 230px;
-        height: 345px;
+        width: 280px;
+        height: 400px;
         background-color: #fff;
-        margin: 10px;
     }
 
     h1 {

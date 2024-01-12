@@ -23,7 +23,7 @@ export default {
             this.showElement = false;
         },
 
-        showImg(){
+        showImg() {
             this.showElement = true;
         }
     }
@@ -34,20 +34,31 @@ export default {
 
 <template>
     <div @mouseenter="hideImg" @mouseout="showImg">
-        <img v-if="showElement === true" :src="getImage(descrizioneSerie.poster_path)" :alt="descrizioneSerie.original_name">
-        <div v-else="showElement === false" class="back" >ciao</div>
+        <img v-if="showElement === true" :src="getImage(descrizioneSerie.poster_path)"
+            :alt="descrizioneSerie.original_name">
+        <div v-else="showElement === false" class="back">
+            <div class="d-flex align-items-center flex-column">
+                <h4>{{ descrizioneSerie.name }}</h4>
+                <h5>{{ descrizioneSerie.original_name }}</h5>
+                <span>{{ descrizioneSerie.original_language }}</span>
+                <p>{{ descrizioneSerie.overview }}</p>
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 img {
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
-.back{
+.back {
     background-color: #000;
     width: 100%;
-    height: 345px;
+    height: 400px;
+    color: #fff;
+    padding: 10px;
+    overflow-y: scroll;
 }
 </style>
