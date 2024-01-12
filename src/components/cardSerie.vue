@@ -33,9 +33,9 @@ export default {
 </script>
 
 <template>
-    <div @mouseover="hideImg" @mouseout="showImg">
+    <div @mouseenter="hideImg" @mouseout="showImg">
         <img v-if="showElement === true" :src="getImage(descrizioneSerie.poster_path)" :alt="descrizioneSerie.original_name">
-        <div class="back" v-else></div>
+        <div v-else="showElement === false" class="back" >ciao</div>
     </div>
 </template>
 
@@ -48,6 +48,6 @@ img {
 .back{
     background-color: #000;
     width: 100%;
-    height: 100%;
+    height: 345px;
 }
 </style>
