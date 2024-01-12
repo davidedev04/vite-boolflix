@@ -35,7 +35,9 @@ export default {
 
 <template>
     <div @mouseenter="hideImg" @mouseout="showImg">
+
         <img v-if="showElement === true" :src="getImage(descrizione.poster_path)" :alt="descrizione.original_title">
+
         <div v-else="showElement === false" class="back">
             <div class="d-flex align-items-center flex-column">
                 <h4>{{ descrizione.title }}</h4>
@@ -44,6 +46,7 @@ export default {
                 <p>{{ descrizione.overview }}</p>
             </div>
         </div>
+        
     </div>
 </template>
 
